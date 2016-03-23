@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+layer-list层叠样式
+android:dither ：图像的抖动处理，当每个颜色值以低于8位表示时，对应图像做抖动处理可以实现在可显示颜色总数比较低（比如256色）时还保持较好的显示效果
+ android:tileMode="repeat" : 让背景小图不是拉伸而是多个重复
+ -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background"
+        android:drawable="@drawable/img_seekbar_bg"
+        android:dither="true">
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="#80028ac8"
+                    android:centerColor="#80127fb1"
+                    android:centerY="0.75"
+                    android:endColor="#a004638f"
+                    android:angle="270"
+                />
+            </shape>
+        </clip>
+    </item>
+    <item
+        android:id="@android:id/progress"
+        android:drawable="@drawable/seekbar_progress_bg"
+    />
+</layer-list>

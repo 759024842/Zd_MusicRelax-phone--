@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <!-- 1 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="6" >
+
+        <TextView
+            android:id="@+id/txt_sen_xuey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="血氧：0"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_sen_xinlv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/txt_sen_xuey"
+            android:text="心率：0"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_sensor_result"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/sensor_result_bg"
+            android:gravity="center"
+            android:text="差"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:visibility="gone" />
+        <!-- 1/1 -->
+
+        <Button
+            android:id="@+id/btn_main_loop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/img_btn_repeat_pressed" />
+        <TextView 
+            android:id="@+id/txt_loop"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@+id/btn_main_loop"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#000000"
+            android:text="顺序播放"
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/btn_main_voice"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_main_loop"
+            android:background="@drawable/voice_true"
+            android:visibility="gone" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/btn_main_loop"
+            android:layout_marginTop="3dp"
+            android:background="#000000" />
+
+        <CheckBox
+            android:id="@+id/cbx_play_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/view_line"
+            android:visibility="gone"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="20dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false" />
+
+        <Button
+            android:id="@+id/btn_play_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view_line"
+            android:visibility="gone"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/img_play_cancel"
+             />
+
+        <View
+            android:id="@+id/view_line1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_below="@+id/btn_play_cancel"
+            android:visibility="gone"
+            android:layout_marginTop="3dp"
+            android:background="#000000" />
+
+        <ListView
+            android:id="@+id/list_play"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/view_line1"
+            android:layout_marginTop="10dp" />
+    </RelativeLayout>
+    <!-- 2 -->
+
+    <RelativeLayout
+        android:id="@+id/rel2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#000000" >
+
+        <SeekBar
+            android:id="@+id/music_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#565656"
+            android:max="100" />
+
+        <TextView
+            android:id="@+id/txt_music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/music_progress"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_main_bluetooth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/blue_close"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_main_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/music_progress"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_main_play"
+            android:background="@drawable/img_btn_previous" />
+
+        <Button
+            android:id="@+id/btn_main_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/music_progress"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_main_next"
+            android:background="@drawable/img_btn_play" />
+
+        <Button
+            android:id="@+id/btn_main_next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/music_progress"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_btn_next" />
+    </RelativeLayout>
+
+</LinearLayout>

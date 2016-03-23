@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel2"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_alignParentBottom="true"
+    android:background="#000000"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_main_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/img_btn_previous" />
+
+        <Button
+            android:id="@+id/btn_main_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btn_main_back"
+            android:background="@drawable/img_btn_play" />
+
+        <Button
+            android:id="@+id/btn_main_next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btn_main_play"
+            android:background="@drawable/img_btn_next" />
+    </RelativeLayout>
+
+<!--     <RelativeLayout
+        android:id="@+id/rel_main_bar"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1.2" >
+
+        <TextView
+            android:id="@+id/txt_rel_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text=""
+            android:textColor="#FFFFFF"
+            android:textSize="10sp" />
+
+        <SeekBar
+            android:id="@+id/bar_main_progress"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_rel_bar"
+            android:layout_centerVertical="true"
+            android:progressDrawable="@drawable/seekbar_img"
+            android:thumb="@drawable/seek_handler"
+            android:thumbOffset="0dip" />
+
+        <TextView
+            android:id="@+id/txt_main_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/bar_main_progress"
+            android:text="00:00"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout> -->
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_main_loop"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_main_bluetooth"
+            android:background="@drawable/img_btn_repeat_pressed" />
+        <Button
+            android:id="@+id/btn_main_voice"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_main_loop"
+            android:background="@drawable/voice_true" />
+        <Button
+            android:id="@+id/btn_main_bluetooth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/blue_close" />
+    </RelativeLayout>
+</LinearLayout>

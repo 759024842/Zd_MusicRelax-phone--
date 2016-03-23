@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  
+android:dither ：图像的抖动处理，当每个颜色值以低于8位表示时，对应图像做抖动处理可以实现在可显示颜色总数比较低（比如256色）时还保持较好的显示效果
+android:tileMode="repeat" : 让背景小图不是拉伸而是多个重复
+android:antialias="true" : 抗锯齿
+ android:filter="false" : 过滤
+-->
+ <layer-list xmlns:android="http://schemas.android.com/apk/res/android">    
+    <item>
+        <clip>
+        <bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/img_seekbar_progress_blue"
+            android:tileMode="repeat"
+            android:antialias="true"
+            android:dither="false"
+            android:filter="false"
+            android:gravity="left"
+        />
+        </clip>
+    </item>
+</layer-list>

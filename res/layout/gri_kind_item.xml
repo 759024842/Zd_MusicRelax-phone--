@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grid_view_item_selector_xml"
+    >
+    <ImageView 
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="6dp"
+        android:id="@+id/img_gri_kind"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/img_gri_kind"
+        android:textSize="16sp"
+        android:lines="2"
+        android:textColor="#000000"
+        android:id="@+id/txt_gri_kind"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="6dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />   
+</RelativeLayout>

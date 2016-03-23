@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:id="@+id/rel"
+    android:background="@drawable/grid_view_item_selector_xml"
+     >  
+  <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:id="@+id/img_gri_pic"
+        />  
+   <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_gri_result"
+        android:layout_below="@+id/img_gri_pic"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:text=""
+        />
+    <!-- <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_gri_title"
+        android:layout_below="@+id/img_gri_pic"
+        android:layout_marginLeft="20dp"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:text="快乐心情"        
+        /> -->
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical" >
+
+    <!-- <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="6" > -->
+
+        <!-- 1 -->
+
+        
+        <!-- 1/2 -->
+        <GridView
+            android:id="@+id/gri_main_lib"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:numColumns="2"
+            android:stretchMode="columnWidth" >
+        </GridView>
+
+        
+    </RelativeLayout>
+    <!-- 2 -->
+
+    <!-- <RelativeLayout
+        android:id="@+id/rel2"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:background="#000000" >
+
+        <Button
+            android:id="@+id/btn_main_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/btn_main_play"
+            android:background="@drawable/img_btn_previous" />
+
+        <Button
+            android:id="@+id/btn_main_play"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/img_btn_play" />
+
+        <Button
+            android:id="@+id/btn_main_next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/btn_main_play"
+            android:background="@drawable/img_btn_next" />
+    </RelativeLayout> -->
+<!-- </LinearLayout> -->
