@@ -2,6 +2,7 @@ package com.zd.musictorelax.service;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -68,9 +69,7 @@ public class MusicBackService extends Service implements MediaPlayer.OnPreparedL
 		dataPLib = new ArrayList<Map<String, Object>>();
 
 		musicPreference = new MusicPreference(MusicBackService.this);
-
 		initBroadPlayR();
-
 		initBroad();
 
 		player = new MediaPlayer();
@@ -412,7 +411,6 @@ public class MusicBackService extends Service implements MediaPlayer.OnPreparedL
 					// player.setDataSource(strPath);//从音乐集合中获取要播放的音乐路径
 					player.setDataSource(fis.getFD());// 从音乐集合中获取要播放的音乐路径
 				} else {
-
 					// File file1 = new File(URI.create());
 					// FileInputStream fis = new FileInputStream(file1);
 					// URL url = new URL("http://pu.zd-psy.com/music/" + strName
@@ -420,15 +418,17 @@ public class MusicBackService extends Service implements MediaPlayer.OnPreparedL
 					// URLConnection conn = url.openConnection();
 					//
 					// player.setDataSource(fis.getFD());
-					String fileName = "http://pu.zd-psy.com/music/" + strName + "" + strFormat;
+					String fileName = "http://pu.zd-psy.com/music/" + Uri.encode(strName) + "" + strFormat;
+				
 					Uri uri = Uri.parse(fileName);
-					Log.e("fileName", fileName);
-					player.setDataSource(fileName);// 从音乐集合中获取要播放的音乐路径
+				
+					Log.e("fileName=================================>", fileName);
+//					player.setDataSource(fileName);// 从音乐集合中获取要播放的音乐路径
+					player.setDataSource(MusicBackService.this, uri);
 					// player.setOnBufferingUpdateListener(this);
 				}
 				// player.setDataSource("http://pu.zd-psy.com/music/"+strName+""+strFormat);//从音乐集合中获取要播放的音乐路径
 				player.prepare();// 准备就绪
-
 				player.start(); // 播放
 				setMsgNotification();
 				Intent intent = new Intent();
@@ -445,14 +445,6 @@ public class MusicBackService extends Service implements MediaPlayer.OnPreparedL
 				}
 				// 启动更新进度条
 				updateProgressBar();
-			} catch (IllegalArgumentException e) {
-				e.printStackTrace();
-				// Toast.makeText(getApplicationContext(), "网络异常",
-				// Toast.LENGTH_SHORT).show();
-			} catch (IllegalStateException e) {
-				e.printStackTrace();
-			} catch (SecurityException e) {
-				e.printStackTrace();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
